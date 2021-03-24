@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset='UTF-8'>
+	<title>EX1 Nivell 2 Sprint3</title>
+</head>
+<body>
+	<p> Aprofita la funció "calculadora" de l'exercici anterior per crear una calculadora completa amb opcions per sumar, restar, multiplicar i dividir. Hauràs de controlar el Zero com a denominador d'una divisió, 
+		ja que si l'usuari divideix qualsevol número entre 0 donarà error (p.e. 3/0), has de garantir que no falli! </p>
+
+<div id="resultat"></div>
+
+<script>
+var operacio=window.prompt("quina operacio vols fer ?  Introdueix el simbol");
+var num_1 = parseInt(window.prompt("introdueix el primer nombre"));
+var num_2=  parseInt(window.prompt("introdueix el segon nombre"));
+
+var final ;
+
+
+switch(operacio){
+
+case ("+"): 
+	 suma();
+	 final=suma();
+	 break;
+
+case ("-"):
+	resta();
+	final=resta();
+	
+	break;
+
+case("*"):
+	multiplicacio();
+	final=multiplicacio();
+	
+	break;
+
+case("/"):
+	divisio();
+	final=divisio();
+	
+	break;
+}
+
+function suma(n1,n2){
+	
+return num_1 + num_2;
+
+
+};
+
+function resta(n1,n2){
+
+
+return num_1 - num_2;
+
+
+};
+
+function divisio(n1,n2){
+ 
+return num_1 / num_2;
+
+
+};
+
+function multiplicacio(n1,n2){
+
+return num_1*num_2;
+
+
+};
+
+alert (" el resultat es" + final);
+
+
+document.getElementById("resultat").innerHTML = "El resultat de " + num_1 + operacio + num_2 + "es de "+ final;
+
+</script>
+
+</body>
+
+</html>
